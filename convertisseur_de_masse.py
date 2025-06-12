@@ -145,10 +145,14 @@ print("\t7 --> milligramme (mg)")
 print('\n')
 
 while True:
-    choix = int(input("Entrez le numéro de votre choix : "))
-    if choix in (1, 2, 3, 4, 5, 6, 7):
-        break
-    else:
+    p_choix = input("Entrez le numéro de votre choix : ")
+    try:
+        choix = int(p_choix)
+        if choix in (1, 2, 3, 4, 5, 6, 7):
+            break
+        else:
+            print("Entrée invalide. Veuillez saisir un numéro de choix valide !")
+    except:
         print("Entrée invalide. Veuillez saisir un numéro de choix valide !")
 
 valeur_darrive = 0.0
